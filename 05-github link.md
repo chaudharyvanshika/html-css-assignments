@@ -1,20 +1,27 @@
-# Assignment 5 – GitHub Repository Link
+# Assignment 5 – GitHub repository link
 
-## Repository Details
+## Push steps
 
-Repository Name: `html-css-assignments`
+1. On github.com, click **New repository** → name it `html-css-assignments` → leave it empty (no README) → Create.
 
-GitHub Username: `chaudharyvanshika`
+2. In your local project folder, run:
 
-Repository Link: https://github.com/chaudharyvanshika/html-css-assignments
+   ```bash
+   git remote add origin https://github.com/chaudharyvanshika/html-css-assignments.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-## Push Steps
+3. Refresh the GitHub page and confirm all files and commits appear.
 
-1. Created a new GitHub repository named `html-css-assignments`.
-2. Connected my local project folder to GitHub using `git remote add origin`.
-3. Pushed the local repository using `git push -u origin main`.
-4. Verified that the main branch was successfully pushed.
+## Optional: host it for free
 
-## Result
+Go to **Settings → Pages → Branch: main / root → Save**.
 
-Successfully created a GitHub repository and connected it to my local project folder.
+Your pages will be live at:
+
+https://chaudharyvanshika.github.io/html-css-assignments/
+
+## Submission
+
+Repository link: https://github.com/chaudharyvanshika/html-css-assignments
