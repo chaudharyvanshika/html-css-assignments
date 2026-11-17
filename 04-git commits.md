@@ -1,86 +1,49 @@
-# Assignment 4 – Git Commits
-
-## Objective
-To understand Git configuration, repository creation, staging, committing, and maintaining a Git commit history.
-
-## 1. Git Identity Configuration
-
-Checked my Git username and email using:
+# Assignment 4 – Repository with at least three meaningful commits
 
 ```bash
-git config --global user.name
-git config --global user.email
-```
+# one-time identity setup
+git config --global user.name  "Your Name"
+git config --global user.email "you@example.com"
 
-Git identity was already configured on my computer.
-
-## 2. Repository Creation
-
-Created a new repository named `html-css-assignments`.
-
-```bash
-mkdir html-css-assignments
-cd html-css-assignments
+# create the repo
+mkdir html-css-assignments && cd html-css-assignments
 git init
 git branch -M main
-```
 
-## 3. Commit 1 – Add README
-
-Created a README file containing the project overview.
-
-```bash
+# commit 1
+echo "# HTML & CSS Assignments" > README.md
 git add README.md
 git commit -m "docs: add README with project overview"
-```
 
-## 4. Commit 2 – Add Assignments 1–5
-
-Added the first five assignment files and committed them.
-
-```bash
+# commit 2
+cp -r /path/to/this/folder/assignments .
 git add 01-*.md 02-*.md 03-*.md 04-*.md 05-*.md
 git commit -m "docs: add setup & git assignments (1-5)"
-```
 
-## 5. Commit 3 – Add HTML Basics Assignments 6–10
-
-The following commands will be used after completing Assignments 6–10.
-
-```bash
+# commit 3
 git add 06-*.html 07-*.html 08-*.html 09-*.html 10-*.html
 git commit -m "feat: add HTML basics assignments (6-10)"
+
+git log --oneline     # shows your history as proof
 ```
 
-## 6. View Commit History
+## Good commit-message rules
 
-Used the following command to check the commit history:
+- Present tense, imperative: *"add navbar"*, not *"added navbar"*.
+- Prefix with a type: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`.
+- One logical change per commit.
 
-```bash
-git log --oneline
-```
+## Suggested history for the whole course
 
-## Result
-
-Successfully configured Git, created the repository, added the README, and committed Assignments 1–5. Commit 3 will be completed after preparing Assignments 6–10.
-
-## Commit 1 – Add README
-
-Created a README file containing the project overview.
-
-```powershell
-git add README.md
-git commit -m "docs: add README with project overview"
-```
-
-## Commit 2 – Add Assignments 1–5
-
-The assignment files will be added after preparing Assignments 1–5.
-
-## Commit 3 – Add HTML Basics Assignments
-
-HTML assignments 6–10 will be added after they are completed.
-
-## Result
-
-Successfully configured Git, created a new local repository, and made the first commit. The remaining commits will be completed as the assignment files are prepared.
+| Commit | Message |
+|--------|---------|
+| 1 | `docs: add README` |
+| 2 | `docs: setup & git assignments (1-5)` |
+| 3 | `feat: HTML basics (6-10)` |
+| 4 | `feat: links, images, lists (11-15)` |
+| 5 | `feat: forms, tables, metadata (16-20)` |
+| 6 | `style: CSS fundamentals (21-25)` |
+| 7 | `style: box model & positioning (26-30)` |
+| 8 | `feat: flexbox layouts (31-35)` |
+| 9 | `feat: grid layouts (36-40)` |
+| 10 | `feat: responsive landing page (41-45)` |
