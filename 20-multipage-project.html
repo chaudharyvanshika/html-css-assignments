@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple multi-page student project website.">
+    <title>Student Multi-Page Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #243b55;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #141e30;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            max-width: 850px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        input, textarea, select {
+            padding: 8px;
+            margin: 8px 0;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            background-color: #243b55;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #141e30;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A Simple Student Multi-Page Project</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#registration">Registration</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Hello! Welcome to my student project website.</p>
+        <p>This website contains information about me,
+           a workshop registration form and contact details.</p>
+        <img src="https://picsum.photos/300/200"
+             alt="A sample welcome image">
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Vanshika Chaudhary.</p>
+        <p>I am a BCA Artificial Intelligence student.
+           I enjoy learning programming and web development.</p>
+
+        <h3>My Details</h3>
+        <table>
+            <tr>
+                <th>Detail</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td>BCA – Artificial Intelligence</td>
+            </tr>
+            <tr>
+                <td>Skills</td>
+                <td>HTML, CSS, Java, Python</td>
+            </tr>
+            <tr>
+                <td>Interest</td>
+                <td>Web Development and AI</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="registration">
+        <h2>Workshop Registration</h2>
+        <p>Register for our student web development workshop.</p>
+
+        <form>
+            <label for="student-name">Full Name:</label><br>
+            <input type="text" id="student-name"
+                   name="student-name" required><br>
+
+            <label for="student-email">Email:</label><br>
+            <input type="email" id="student-email"
+                   name="student-email" required><br>
+
+            <label for="course">Choose Workshop:</label><br>
+            <select id="course" name="course" required>
+                <option value="">Select Workshop</option>
+                <option value="html">HTML Basics</option>
+                <option value="css">CSS Basics</option>
+                <option value="web">Web Development</option>
+            </select><br>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:your-email@example.com">
+            Send an Email</a></p>
+
+        <form>
+            <label for="contact-name">Your Name:</label><br>
+            <input type="text" id="contact-name"
+                   name="contact-name" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"
+                      rows="5" required></textarea><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Created by Vanshika Chaudhary | Student Project</p>
+    </footer>
+
+</body>
+</html>
