@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Examples of different CSS selectors.">
+    <title>CSS Selector Types</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        /* Class Selector */
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        /* ID Selector */
+        #special {
+            color: crimson;
+            font-weight: bold;
+        }
+
+        /* Grouping Selector */
+        h2, h3 {
+            color: darkgreen;
+        }
+
+        /* Descendant Selector */
+        .card p {
+            font-size: 16px;
+        }
+
+        /* Child Selector */
+        .parent > p {
+            background-color: lightyellow;
+            padding: 8px;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+        /* Pseudo-class */
+        button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+
+        input:focus {
+            background-color: lightyellow;
+        }
+
+        /* Pseudo-element */
+        .intro::first-line {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selector Types</h1>
+    <p class="intro">
+        CSS selectors help us select HTML elements and apply styles.
+        Different selectors are used for different purposes.
+    </p>
+
+    <div class="card">
+        <h2>Class Selector</h2>
+        <p>This section uses the class selector .card.</p>
+    </div>
+
+    <div class="card">
+        <h2>ID Selector</h2>
+        <p id="special">This paragraph uses the ID selector #special.</p>
+    </div>
+
+    <h2>Grouping Selector</h2>
+    <h3>Both headings share the same style.</h3>
+
+    <div class="parent">
+        <h2>Child Selector</h2>
+        <p>This is a direct child paragraph.</p>
+        <div>
+            <p>This is a nested paragraph.</p>
+        </div>
+    </div>
+
+    <h2>Attribute Selector</h2>
+    <label for="username">Enter Name:</label>
+    <input type="text" id="username" placeholder="Your name">
+
+    <h2>Pseudo-class Selector</h2>
+    <button>Move your mouse here</button>
+
+</body>
+</html>
