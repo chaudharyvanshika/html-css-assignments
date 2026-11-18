@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Meta Tag Audit – Template and Report</title>
+    <meta name="description" content="Audit report of HTML assignment files and their important meta tags.">
+    <meta name="author" content="Vanshika Chaudhary">
+    <meta name="keywords" content="HTML, meta tags, SEO, audit">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1f3a93">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Meta Tag Audit">
+    <meta property="og:description" content="Important meta tags for HTML pages.">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        .ok {
+            color: green;
+        }
+
+        .fix {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Meta-Tag Audit of Assignments 6–18</h1>
+
+    <p>
+        Every HTML file was checked for charset, viewport,
+        description and a meaningful title.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>File</th>
+                <th>Missing Before</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>06-basic-page.html</td>
+                <td>Viewport, description</td>
+                <td class="ok">Fixed ✔</td>
+            </tr>
+
+            <tr>
+                <td>07-resume-text-only.html</td>
+                <td>Viewport, description</td>
+                <td class="ok">Fixed ✔</td>
+            </tr>
+
+            <tr>
+                <td>08-resume-semantic.html</td>
+                <td>Viewport, description</td>
+                <td class="ok">Fixed ✔</td>
+            </tr>
+
+            <tr>
+                <td>09-debug-buggy-html.html</td>
+                <td>Charset (bug #2)</td>
+                <td class="ok">Fixed ✔</td>
+            </tr>
+
+            <tr>
+                <td>10–18</td>
+                <td>Description on some pages</td>
+                <td class="ok">Fixed ✔</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Why Each Tag Matters</h2>
+
+    <ul>
+        <li><b>Charset:</b> Prevents incorrect display of characters.</li>
+        <li><b>Viewport:</b> Makes pages suitable for mobile screens.</li>
+        <li><b>Description:</b> Provides a summary for search results.</li>
+        <li><b>Open Graph:</b> Controls previews when links are shared.</li>
+    </ul>
+
+</body>
+</html>
+
