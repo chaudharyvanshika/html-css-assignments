@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A styled multi-page student project website.">
+    <title>Styled Multi-Page Website</title>
+
+    <style>
+        :root {
+            --primary: #243b55;
+            --accent: #e09f3e;
+            --background: #f2f5f9;
+            --text: #333;
+            --card: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        nav {
+            background-color: #17283c;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        section {
+            background-color: var(--card);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            scroll-margin-top: 65px;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
+        }
+
+        .home-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #365b80;
+        }
+
+        .design-box {
+            background-color: #fff5df;
+            padding: 15px;
+            border-left: 5px solid var(--accent);
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            section {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Student Website</h1>
+        <p>A Styled Multi-Page Project</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#registration">Registration</a>
+        <a href="#contact">Contact</a>
+        <a href="#design">Design Choices</a>
+    </nav>
+
+    <main class="container">
+
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to my student website!</p>
+            <p>This website introduces me and provides
+               workshop registration and contact information.</p>
+
+            <img class="home-image"
+                 src="https://picsum.photos/600/350"
+                 alt="Sample welcome image">
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is Vanshika Chaudhary.</p>
+            <p>I am a BCA Artificial Intelligence student
+               interested in programming and web development.</p>
+
+            <h3>My Details</h3>
+
+            <table>
+                <tr>
+                    <th>Detail</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>BCA – Artificial Intelligence</td>
+                </tr>
+                <tr>
+                    <td>University</td>
+                    <td>Invertis University</td>
+                </tr>
+                <tr>
+                    <td>Skills</td>
+                    <td>Java, Python, HTML, CSS, SQL</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="registration">
+            <h2>Workshop Registration</h2>
+            <p>Fill in the form to register for a workshop.</p>
+
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="workshop">Choose Workshop:</label>
+                <select id="workshop" name="workshop" required>
+                    <option value="">Select Workshop</option>
+                    <option value="html">HTML Basics</option>
+                    <option value="css">CSS Basics</option>
+                    <option value="web">Web Development</option>
+                </select>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email:
+                <a href="mailto:your-email@example.com">
+                    Send an Email
+                </a>
+            </p>
+
+            <form>
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name"
+                       name="contact-name" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message"
+                          rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <section id="design">
+            <h2>Design Choices</h2>
+
+            <div class="design-box">
+                <h3>Why I Chose This Design</h3>
+                <ul>
+                    <li><b>Navy blue:</b> Gives a professional appearance.</li>
+                    <li><b>Amber:</b> Highlights important elements.</li>
+                    <li><b>White cards:</b> Make content easy to read.</li>
+                    <li><b>CSS variables:</b> Keep colours consistent.</li>
+                    <li><b>Responsive layout:</b> Works on smaller screens.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by Vanshika Chaudhary | Assignment 25</p>
+    </footer>
+
+</body>
+</html>
