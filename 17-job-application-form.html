@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10}" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Job Details</legend>
+
+            <label for="position">Position Applied For:</label>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="AI Developer">AI Developer</option>
+            </select>
+            <br><br>
+
+            <p>Work Mode:</p>
+
+            <input type="radio" id="office" name="workmode" value="Office">
+            <label for="office">Office</label>
+
+            <input type="radio" id="remote" name="workmode" value="Remote">
+            <label for="remote">Remote</label>
+
+            <input type="radio" id="hybrid" name="workmode" value="Hybrid">
+            <label for="hybrid">Hybrid</label>
+
+            <br><br>
+
+            <p>Skills:</p>
+
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="java" name="skills" value="Java">
+            <label for="java">Java</label>
+
+            <input type="checkbox" id="python" name="skills" value="Python">
+            <label for="python">Python</label>
+
+            <br><br>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume"
+                   accept=".pdf,.doc,.docx" required>
+            <br><br>
+
+            <label for="cover">Cover Letter:</label>
+            <br>
+            <textarea id="cover" name="cover" rows="5" cols="40"
+                      placeholder="Write about yourself..."></textarea>
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Apply Now</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
