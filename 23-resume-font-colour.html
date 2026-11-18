@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional resume with font pairing and colour palette.">
+    <title>Resume - Vanshika Chaudhary</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #f7f3e9;
+            --navy: #1d3557;
+            --amber: #e09f3e;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', Arial, sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+            margin: 0;
+            padding: 30px 15px;
+            line-height: 1.6;
+        }
+
+        .resume {
+            max-width: 850px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-top: 8px solid var(--amber);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--amber);
+            padding-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        h1 {
+            color: var(--navy);
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: var(--navy);
+            border-bottom: 2px solid var(--amber);
+            padding-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #777;
+            font-size: 18px;
+        }
+
+        section {
+            margin-top: 25px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            background-color: var(--navy);
+            color: white;
+            padding: 7px 15px;
+            border-radius: 20px;
+        }
+
+        .highlight {
+            color: #b36b00;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .resume {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <header>
+            <h1>Vanshika Chaudhary</h1>
+            <p class="subtitle">BCA – Artificial Intelligence Student</p>
+            <p>Bareilly, Uttar Pradesh | Email: your-email@example.com</p>
+        </header>
+
+        <section>
+            <h2>Career Objective</h2>
+            <p>
+                To improve my technical knowledge and programming skills
+                and gain practical experience in computer applications,
+                data analysis and artificial intelligence.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Invertis University, Bareilly</p>
+            <p>Specialization: <span class="highlight">Artificial Intelligence</span></p>
+            <p>Currently pursuing 2nd Year</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span>C Programming</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Strengths</h2>
+            <ul>
+                <li>Willingness to learn</li>
+                <li>Teamwork</li>
+                <li>Problem-solving</li>
+                <li>Time management</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+            <p>Web Development, Programming and Artificial Intelligence.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Vanshika Chaudhary | Resume</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
