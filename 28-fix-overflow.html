@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix CSS Overflow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #243b64;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        /* Responsive image */
+        .responsive-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        /* Long text wrapping */
+        .long-text {
+            overflow-wrap: anywhere;
+            background: #e4edff;
+            padding: 12px;
+        }
+
+        /* Table horizontal scrolling */
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        table {
+            width: 700px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #243b64;
+            color: white;
+        }
+
+        /* Fixed height box with scrolling */
+        .scroll-box {
+            height: 120px;
+            overflow-y: auto;
+            background: #e8f4ff;
+            padding: 15px;
+            border: 2px solid #3976b9;
+        }
+
+        /* Code block horizontal scrolling */
+        pre {
+            overflow-x: auto;
+            background: #222;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow Solutions</h1>
+
+    <div class="section">
+        <h2>1. Responsive Image</h2>
+        <p>The image adjusts to the available screen width.</p>
+
+        <img
+            class="responsive-image"
+            src="https://picsum.photos/600/300"
+            alt="Sample landscape image">
+    </div>
+
+    <div class="section">
+        <h2>2. Long Text Wrapping</h2>
+        <p class="long-text">
+            ThisIsAVeryLongWordThatShouldWrapProperlyInsteadOfOverflowingTheContainer
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. Wide Table</h2>
+        <p>Scroll horizontally to see all table columns.</p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Subject</th>
+                    <th>Semester</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Vanshika</td>
+                    <td>BCA</td>
+                    <td>HTML</td>
+                    <td>Third</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Student 2</td>
+                    <td>BCA</td>
+                    <td>CSS</td>
+                    <td>Third</td>
+                    <td>85</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Scrollable Box</h2>
+        <p>This box has a fixed height and vertical scrolling.</p>
+
+        <div class="scroll-box">
+            <p>Paragraph 1: CSS helps us create beautiful webpages.</p>
+            <p>Paragraph 2: Overflow controls extra content.</p>
+            <p>Paragraph 3: Scrollbars help users view hidden content.</p>
+            <p>Paragraph 4: This box has limited height.</p>
+            <p>Paragraph 5: Scroll down to read more content.</p>
+            <p>Paragraph 6: This is the last paragraph.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Code Block Scrolling</h2>
+        <p>Long code can scroll horizontally without breaking the page.</p>
+
+        <pre><code>
+.container {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+    overflow-wrap: anywhere;
+}
+        </code></pre>
+    </div>
+
+    <div class="section">
+        <h2>6. Box Sizing</h2>
+        <p>
+            The universal box-sizing: border-box rule includes
+            padding and border inside an element's width and height.
+            This helps prevent unexpected overflow.
+        </p>
+    </div>
+
+    <footer>
+        <p>Assignment 28 - Fix CSS Overflow</p>
+    </footer>
+
+</body>
+</html>
