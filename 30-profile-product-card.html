@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile and Product Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #243b64;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-card h2 {
+            color: #243b64;
+            margin-bottom: 5px;
+        }
+
+        .profession {
+            color: #777;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+        }
+
+        .stats strong {
+            display: block;
+            color: #243b64;
+            font-size: 20px;
+        }
+
+        button {
+            background: #3976b9;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #243b64;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .discount {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .rating {
+            color: #f39c12;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: #243b64;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 8px;
+        }
+
+        .product-card button {
+            width: 100%;
+            margin-top: 15px;
+            background: #e67e22;
+        }
+
+        .product-card button:hover {
+            background: #ca6514;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Profile and Product Cards</h1>
+
+    <div class="container">
+
+        <!-- Profile Card -->
+        <div class="card profile-card">
+            <img
+                class="profile-img"
+                src="https://i.pravatar.cc/200?img=47"
+                alt="Profile photo of a student">
+
+            <h2>Vanshika Chaudhary</h2>
+            <p class="profession">BCA AI Student</p>
+
+            <p>
+                Passionate about programming, technology
+                and learning new skills.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <strong>120</strong>
+                    Posts
+                </div>
+
+                <div>
+                    <strong>850</strong>
+                    Followers
+                </div>
+
+                <div>
+                    <strong>300</strong>
+                    Following
+                </div>
+            </div>
+
+            <button type="button">Follow</button>
+        </div>
+
+        <!-- Product Card -->
+        <div class="card product-card">
+            <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+                alt="Wireless headphones">
+
+            <span class="discount">20% OFF</span>
+
+            <h2>Wireless Headphones</h2>
+
+            <p>Comfortable headphones with clear sound quality.</p>
+
+            <div class="rating">
+                ★★★★★ (4.8/5)
+            </div>
+
+            <p class="price">
+                ₹1,599
+                <span class="old-price">₹1,999</span>
+            </p>
+
+            <button type="button">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Assignment 30 - Profile and Product Cards</p>
+    </footer>
+
+</body>
+</html>
