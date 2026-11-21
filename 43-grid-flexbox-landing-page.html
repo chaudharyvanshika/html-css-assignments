@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreativeSpace - Landing Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Flexbox navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      color: #6c5ce7;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: #333;
+    }
+
+    /* Grid hero section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #273c75;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    /* Flexbox buttons */
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #6c5ce7;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+    }
+
+    .btn-light {
+      background: white;
+      color: #6c5ce7;
+      border: 2px solid #6c5ce7;
+    }
+
+    /* Grid features */
+    .features {
+      background: #f1efff;
+      padding: 50px 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* Flexbox feature cards */
+    .feature {
+      display: flex;
+      gap: 12px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .feature span {
+      font-size: 25px;
+    }
+
+    /* Grid pricing */
+    .pricing {
+      padding: 50px 0;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* Flexbox pricing cards */
+    .plan {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 25px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .plan h3 {
+      color: #6c5ce7;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .plan .btn {
+      margin-top: auto;
+    }
+
+    .popular {
+      border: 2px solid #6c5ce7;
+    }
+
+    /* Flexbox footer */
+    footer {
+      background: #273c75;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="container">
+    <span class="logo">CreativeSpace</span>
+
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero container">
+    <div>
+      <h1>Make Your Work Simple and Creative</h1>
+      <p>Organize your tasks, manage your projects and work better every day.</p>
+
+      <div class="buttons">
+        <a href="#pricing" class="btn">Get Started</a>
+        <a href="#features" class="btn btn-light">Learn More</a>
+      </div>
+    </div>
+
+    <img src="https://picsum.photos/id/0/700/500" alt="Laptop on a desk">
+  </header>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Our Features</h2>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <span>✅</span>
+          <div>
+            <h3>Easy Planning</h3>
+            <p>Plan your daily work easily.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>⏰</span>
+          <div>
+            <h3>Save Time</h3>
+            <p>Complete your tasks on time.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>🤝</span>
+          <div>
+            <h3>Team Work</h3>
+            <p>Work together with your team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing container" id="pricing">
+    <h2>Choose Your Plan</h2>
+
+    <div class="price-grid">
+      <div class="plan">
+        <h3>Basic</h3>
+        <p class="price">₹0</p>
+        <p>Basic features for beginners.</p>
+        <a href="#" class="btn btn-light">Choose Plan</a>
+      </div>
+
+      <div class="plan popular">
+        <h3>Pro</h3>
+        <p class="price">₹499</p>
+        <p>More features for growing teams.</p>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+      <div class="plan">
+        <h3>Premium</h3>
+        <p class="price">₹999</p>
+        <p>All features included.</p>
+        <a href="#" class="btn btn-light">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <p>© 2026 CreativeSpace</p>
+      <p>Privacy | Terms | Contact Us</p>
+    </div>
+  </footer>
+
+</body>
+</html>
