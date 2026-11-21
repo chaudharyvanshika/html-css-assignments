@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld - Explore More</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #087e8b;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul a:hover {
+            color: #087e8b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #e0f4f5;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .hero-text,
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #07575f;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9f1c;
+            color: #222;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #07575f;
+            margin-bottom: 30px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            flex: 1 1 250px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .feature span {
+            font-size: 35px;
+        }
+
+        .feature h3 {
+            margin: 10px 0;
+        }
+
+        /* Testimonials */
+        .stories {
+            background-color: #07575f;
+            color: white;
+            padding: 45px 0;
+        }
+
+        .story-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .story {
+            flex: 1 1 300px;
+            max-width: 450px;
+        }
+
+        .story cite {
+            display: block;
+            margin-top: 10px;
+            color: #ffcf70;
+            font-style: normal;
+        }
+
+        /* Footer */
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #666;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .story-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <span class="logo">TravelWorld</span>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Destinations</a></li>
+                <li><a href="#stories">Reviews</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container">
+
+            <div class="hero-text">
+                <h1>Discover Beautiful Places</h1>
+
+                <p>
+                    Explore amazing destinations, enjoy new experiences
+                    and make unforgettable memories with TravelWorld.
+                </p>
+
+                <a href="#features" class="btn">Explore Now</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700"
+                     alt="Beautiful mountain travel destination">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+
+            <h2>Why Travel With Us?</h2>
+
+            <div class="feature-list">
+
+                <div class="feature">
+                    <span>🌍</span>
+                    <h3>Beautiful Places</h3>
+                    <p>Discover amazing destinations around the world.</p>
+                </div>
+
+                <div class="feature">
+                    <span>✈️</span>
+                    <h3>Easy Booking</h3>
+                    <p>Plan your trips quickly and comfortably.</p>
+                </div>
+
+                <div class="feature">
+                    <span>🏨</span>
+                    <h3>Best Hotels</h3>
+                    <p>Find comfortable stays for your holidays.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="stories" id="stories">
+        <div class="container">
+
+            <div class="story-list">
+
+                <blockquote class="story">
+                    "My trip was amazing! Everything was well planned."
+                    <cite>— Ananya, Delhi</cite>
+                </blockquote>
+
+                <blockquote class="story">
+                    "TravelWorld helped me discover beautiful places."
+                    <cite>— Rahul, Mumbai</cite>
+                </blockquote>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <span>&copy; 2026 TravelWorld</span>
+            <span>Privacy | Terms | Contact</span>
+        </div>
+    </footer>
+
+</body>
+</html>
