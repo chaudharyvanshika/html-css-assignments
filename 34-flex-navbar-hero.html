@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudWorld - Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 8px lightgray;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #6545c5;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .links a:hover {
+            color: #6545c5;
+        }
+
+        .links .start {
+            background-color: #6545c5;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            color: #30205f;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .primary {
+            background-color: #6545c5;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #6545c5;
+            color: #6545c5;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 768px) {
+
+            .menu-icon {
+                display: block;
+            }
+
+            .links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+            }
+
+            #menu:checked ~ .links {
+                display: flex;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 35px 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">CloudWorld</div>
+
+        <input type="checkbox" id="menu">
+
+        <label for="menu" class="menu-icon">☰</label>
+
+        <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="start">Get Started</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="hero">
+
+        <div class="hero-text">
+            <h1>Welcome to the World of Technology</h1>
+
+            <p>
+                Discover smart solutions, explore new ideas
+                and make your digital journey easier with us.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn primary">Explore Now</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+                 alt="Computer and laptop on a desk">
+        </div>
+
+    </header>
+
+</body>
+</html>
