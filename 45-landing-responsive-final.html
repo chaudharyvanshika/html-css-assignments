@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive coffee shop landing page.">
+  <title>Daily Brew Cafe</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8ef;
+      color: #493021;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      padding: 18px 0;
+      background: white;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #588157;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a:hover {
+      color: #588157;
+    }
+
+    .menu-toggle,
+    .menu-icon {
+      display: none;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      margin-bottom: 25px;
+    }
+
+    .hero img {
+      height: 350px;
+      border-radius: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c58b36;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+    }
+
+    /* Menu */
+    .menu {
+      background: white;
+      padding: 50px 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .food-card {
+      background: #fff8ef;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .food-card img {
+      height: 200px;
+    }
+
+    .food-info {
+      padding: 18px;
+    }
+
+    .food-info p {
+      margin-top: 5px;
+    }
+
+    .price {
+      color: #588157;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* About */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .about img {
+      height: 300px;
+      border-radius: 15px;
+    }
+
+    .about h2 {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    /* Contact */
+    .contact {
+      background: #588157;
+      color: white;
+      text-align: center;
+      padding: 45px 15px;
+    }
+
+    .contact .btn {
+      margin-top: 18px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px 0;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .hero,
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about h2 {
+        text-align: center;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+      }
+
+      .menu-toggle:checked ~ nav {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        padding-top: 15px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px;
+        border-top: 1px solid #eee;
+      }
+
+      .hero {
+        padding: 35px 0;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero img {
+        height: 220px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      footer .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <a href="#" class="logo">☕ Daily Brew</a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero container" id="home">
+      <div>
+        <h1>Your Daily Dose of Happiness</h1>
+        <p>
+          Enjoy freshly brewed coffee, tasty snacks and
+          wonderful moments at Daily Brew Cafe.
+        </p>
+        <a href="#menu" class="btn">Explore Menu</a>
+      </div>
+
+      <img src="https://picsum.photos/id/225/800/600"
+           alt="Fresh coffee served on a table">
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="container">
+        <h2>Our Special Menu</h2>
+
+        <div class="menu-grid">
+
+          <article class="food-card">
+            <img src="https://picsum.photos/id/1060/500/400"
+                 alt="Coffee drink">
+            <div class="food-info">
+              <h3>Classic Coffee</h3>
+              <p>Freshly brewed coffee with rich flavour.</p>
+              <p class="price">₹120</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <img src="https://picsum.photos/id/292/500/400"
+                 alt="Fresh croissant">
+            <div class="food-info">
+              <h3>Butter Croissant</h3>
+              <p>Soft, crispy and freshly baked.</p>
+              <p class="price">₹100</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <img src="https://picsum.photos/id/312/500/400"
+                 alt="Chocolate cake">
+            <div class="food-info">
+              <h3>Chocolate Cake</h3>
+              <p>A delicious treat for chocolate lovers.</p>
+              <p class="price">₹180</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <img src="https://picsum.photos/id/431/700/500"
+           alt="Cafe interior">
+
+      <div>
+        <h2>Welcome to Daily Brew</h2>
+        <p>
+          Our cafe is a comfortable place for friends,
+          students and families. We believe in serving
+          fresh food, quality coffee and happy moments.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Come Visit Us</h2>
+        <p>We are open every day from 8 AM to 10 PM.</p>
+        <a href="tel:+919000000000" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Daily Brew Cafe</span>
+      <span>Instagram | Facebook</span>
+    </div>
+  </footer>
+
+</body>
+</html>
