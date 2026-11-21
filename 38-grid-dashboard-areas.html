@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9edf5;
+        }
+
+        .dashboard {
+            display: grid;
+            min-height: 100vh;
+            padding: 15px;
+            gap: 15px;
+
+            grid-template-columns: 200px 1fr 1fr 1fr;
+            grid-template-rows: 65px auto 1fr 50px;
+
+            grid-template-areas:
+                "header header header header"
+                "sidebar visitors orders revenue"
+                "sidebar chart chart activity"
+                "footer footer footer footer";
+        }
+
+        .dashboard > * {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #263b65;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #344f80;
+            color: white;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 15px 0;
+        }
+
+        .visitors {
+            grid-area: visitors;
+        }
+
+        .orders {
+            grid-area: orders;
+        }
+
+        .revenue {
+            grid-area: revenue;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 28px;
+            color: #344f80;
+            margin-top: 10px;
+        }
+
+        .chart {
+            grid-area: chart;
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            height: 160px;
+            margin-top: 20px;
+        }
+
+        .bars span {
+            flex: 1;
+            background-color: #5278d5;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .activity {
+            grid-area: activity;
+        }
+
+        .activity li {
+            margin: 15px 0;
+        }
+
+        .footer {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .dashboard {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+
+                grid-template-areas:
+                    "header header"
+                    "visitors orders"
+                    "revenue revenue"
+                    "chart chart"
+                    "activity activity"
+                    "sidebar sidebar"
+                    "footer footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="header">
+            <h2>My Dashboard</h2>
+            <span>Welcome, Vanshika</span>
+        </header>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li>📊 Overview</li>
+                <li>👥 Users</li>
+                <li>💰 Sales</li>
+                <li>⚙️ Settings</li>
+            </ul>
+        </aside>
+
+        <section class="stat visitors">
+            <span>Visitors</span>
+            <strong>12,480</strong>
+        </section>
+
+        <section class="stat orders">
+            <span>Orders</span>
+            <strong>842</strong>
+        </section>
+
+        <section class="stat revenue">
+            <span>Revenue</span>
+            <strong>₹4.2 Lakh</strong>
+        </section>
+
+        <section class="chart">
+            <h2>Weekly Sales</h2>
+
+            <div class="bars">
+                <span style="height: 40%"></span>
+                <span style="height: 65%"></span>
+                <span style="height: 50%"></span>
+                <span style="height: 85%"></span>
+                <span style="height: 70%"></span>
+                <span style="height: 95%"></span>
+                <span style="height: 60%"></span>
+            </div>
+        </section>
+
+        <section class="activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>New order received</li>
+                <li>New user registered</li>
+                <li>Payment completed</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            © 2026 My Dashboard
+        </footer>
+
+    </div>
+
+</body>
+</html>
