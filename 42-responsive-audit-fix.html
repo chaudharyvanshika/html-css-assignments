@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Audit</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f4f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: clamp(25px, 5vw, 40px);
+      margin-bottom: 20px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    nav a {
+      background: #273c75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      min-height: 44px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #ccc;
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card h2 {
+      margin-top: 10px;
+      color: #273c75;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 30px;
+      background: white;
+    }
+
+    table {
+      width: 100%;
+      min-width: 550px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #dfe6e9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Responsive Design – Fixed</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <section class="grid">
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1011/600/400" alt="Lake view">
+        <h2>Nature</h2>
+        <p>Beautiful views of nature.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Mountain river">
+        <h2>Mountains</h2>
+        <p>Explore mountains and rivers.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1016/600/400" alt="Rocky landscape">
+        <h2>Landscape</h2>
+        <p>Enjoy beautiful landscapes.</p>
+      </div>
+
+    </section>
+
+    <h2 style="margin-top: 30px;">Plan Details</h2>
+
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Plan</th>
+          <th>Storage</th>
+          <th>Users</th>
+          <th>Support</th>
+          <th>Price</th>
+        </tr>
+
+        <tr>
+          <td>Basic</td>
+          <td>10 GB</td>
+          <td>1</td>
+          <td>Email</td>
+          <td>Free</td>
+        </tr>
+
+        <tr>
+          <td>Premium</td>
+          <td>100 GB</td>
+          <td>5</td>
+          <td>Chat</td>
+          <td>₹499</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
